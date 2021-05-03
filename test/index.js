@@ -431,6 +431,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -468,6 +470,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -505,6 +509,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(404);
 
@@ -532,6 +538,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(500, 'Simulated server error');
 
@@ -545,6 +553,8 @@ describe('detect-node-support', () => {
 
                 Nock('https://api.github.com')
                     .get('/repos/pkgjs/detect-node-support/contents/package.json')
+                    .reply(404)
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
                     .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
@@ -560,6 +570,8 @@ describe('detect-node-support', () => {
                 Nock('https://api.github.com')
                     .get('/repos/pkgjs/detect-node-support/contents/package.json')
                     .reply(500)
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -601,6 +613,8 @@ describe('detect-node-support', () => {
                         'x-ratelimit-remaining': '0',
                         'x-ratelimit-reset': `${Math.round(Date.now() / 1000) + 1}`
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -635,6 +649,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(403, 'Abuse detected');
 
@@ -658,6 +674,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -699,6 +717,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(404);
 
@@ -784,6 +804,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -828,6 +850,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Buffer.from(JSON.stringify({ name: 'something-else' })).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -878,6 +902,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -915,6 +941,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -952,6 +980,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', 'package.json')).toString('base64')
                     })
+                    .get('/repos/pkgjs/detect-node-support/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/pkgjs/detect-node-support/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -993,6 +1023,8 @@ describe('detect-node-support', () => {
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, 'fixtures', 'hapi-package.json')).toString('base64')
                     })
+                    .get('/repos/hapijs/hapi/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/hapijs/hapi/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, '..', '.travis.yml')).toString('base64')
@@ -1045,34 +1077,47 @@ describe('detect-node-support', () => {
                     .reply(200, Fs.readFileSync(Path.join(__dirname, 'fixtures', 'packuments', 'rimraf.json')));
 
                 Nock('https://api.github.com')
+
                     .get('/repos/watson/is-ci/contents/package.json')
                     .reply(200, {
                         content: Buffer.from(JSON.stringify({ name: 'is-ci', version: '2.0.0' })).toString('base64')
                     })
+                    .get('/repos/watson/is-ci/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/watson/is-ci/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, 'fixtures', 'travis-ymls', 'testing-single-version.yml')).toString('base64')
                     })
+
                     .get('/repos/watson/ci-info/contents/package.json')
                     .reply(200, {
                         content: Buffer.from(JSON.stringify({ name: 'ci-info', version: '2.0.0' })).toString('base64')
                     })
+                    .get('/repos/watson/ci-info/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/watson/ci-info/contents/.travis.yml')
                     .reply(200, {
                         content: Fs.readFileSync(Path.join(__dirname, 'fixtures', 'travis-ymls', 'testing-single-version.yml')).toString('base64')
                     })
+
                     .get('/repos/visionmedia/debug/contents/package.json')
                     .reply(200, {
                         content: Buffer.from(JSON.stringify({ name: 'debug', version: '4.1.1' })).toString('base64')
                     })
+                    .get('/repos/visionmedia/debug/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/visionmedia/debug/contents/.travis.yml')
                     .reply(404)
+
                     .get('/repos/zeit/ms/contents/package.json')
                     .reply(200, {
                         content: Buffer.from(JSON.stringify({ name: 'ms', version: '2.1.2' })).toString('base64')
                     })
+                    .get('/repos/zeit/ms/contents/.github%2Fworkflows')
+                    .reply(404)
                     .get('/repos/zeit/ms/contents/.travis.yml')
                     .reply(404)
+
                     .get('/repos/isaacs/rimraf/contents/package.json')
                     .reply(404);
             });
